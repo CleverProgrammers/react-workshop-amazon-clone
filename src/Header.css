@@ -1,0 +1,94 @@
+.Header {
+    background-color: #0F1111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.Header-logo img {
+    width: 100px;
+    margin-left: 11px;
+    margin-top: 3px;
+    padding-left: 8px;
+}
+
+.Header-optionAddress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 9px;
+}
+
+.Header-option {
+    display: flex;
+    flex-direction: column;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Header-optionLineTwo {
+    font-weight: 700;
+}
+
+.Header-optionCart {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.Header-search {
+    display: flex;
+    flex-grow: 1;
+    background-color: white;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.Header-search:focus-within {
+    box-shadow: 0 0 0 3px #F90;
+}
+
+.Header-searchInput {
+    flex-grow: 1;
+    border: 0;
+    padding-left: 5px;
+    font-size: 15px;
+    
+}
+
+.Header-searchInput:focus {
+    outline: none;
+}
+
+.Header-searchIconContainer {
+    width: 45px;
+    background-color: #febd69;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #111;
+}
+
+.Header-navItems {
+    display: flex;
+    justify-content: center;
+}
+
+.Header-optionCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header-cartCount {
+    padding-left: 4px;
+    font-weight: 700;
+    color: #f08804;
+}
+
+
+
