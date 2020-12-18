@@ -30,6 +30,12 @@
     padding-bottom: 10px;
 }
 
+/* sign out button shows pointer on hover */
+
+.Header-signOut{
+    cursor: pointer;
+}
+
 .Header-optionLineTwo {
     font-weight: 700;
 }
