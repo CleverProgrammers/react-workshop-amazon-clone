@@ -3,6 +3,7 @@ import './Header.css'
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { Link } from "react-router-dom";
 
 function Header({ cartItems }) {
 
@@ -16,9 +17,11 @@ function Header({ cartItems }) {
 
     return (
         <div className="Header">
-            <div className="Header-logo">
-                <img src={process.env.PUBLIC_URL + '/logo.png'}/>
-            </div>
+            <Link to='/'>
+                <div className="Header-logo">
+                    <img src={process.env.PUBLIC_URL + '/logo.png'}/>
+                </div>
+            </Link>
 
             <div className="Header-optionAddress">
                 <LocationOnIcon />
@@ -45,11 +48,13 @@ function Header({ cartItems }) {
                     <span className="Header-optionLineOne">Returns</span>
                     <span className="Header-optionLineTwo">& Orders</span>
                 </div>
-
-                <div className="Header-optionCart">
-                    <ShoppingBasketIcon />
-                    <span className="Header-cartCount">{getCount()}</span>
-                </div>
+                
+                <Link to='/cart'>
+                    <div className="Header-optionCart">
+                        <ShoppingBasketIcon />
+                        <span className="Header-cartCount">{getCount()}</span>
+                    </div>
+                </Link>
             </div>
         </div>
     )

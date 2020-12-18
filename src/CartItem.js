@@ -1,17 +1,23 @@
 import React from 'react'
+import './CartItem.css'
 
 function CartItem(props) {
+
+
+    let options = []
+
+    for (let i = 1; i < Math.max(props.item.quantity+1, 20); i++) {
+        options.push(<option value={i}>Qty: {i}</option>)
+    }
+
     return (
         <div className="CartItem">
             <div className="CartItem-image">
-                <img src={process.env.PUBLIC_URL + '/items/' + props.item.image} alt=""/>
+                <img src={props.item.image} alt=""/>
             </div>
             <div className="CartItem-info">
                 <div className="info-title">
-                    <h2>{props.item.title}</h2>
-                </div>
-                <div className="info-stock">
-                    {props.item.stock}
+                    <h2>{props.item.name}</h2>
                 </div>
                 <div className="item-actions">
                     <div className="item-quantity">
@@ -19,15 +25,7 @@ function CartItem(props) {
                             onChange={(e)=> props.changeItemQuantity(e, props.id)} 
                             value={props.item.quantity}
                             >
-                            <option value="1">Qty: 1</option>
-                            <option value="2">Qty: 2</option>
-                            <option value="3">Qty: 3</option>
-                            <option value="4">Qty: 4</option>
-                            <option value="5">Qty: 5</option>
-                            <option value="6">Qty: 6</option>
-                            <option value="7">Qty: 7</option>
-                            <option value="8">Qty: 8</option>
-                            <option value="9">Qty: 9</option>
+                            {options}
                         </select>
                     </div>
                     <span className="item-actions-divider">|</span>

@@ -34,6 +34,18 @@ function Home() {
                             ))
                         }
                     </div>
+                    <div className="Home-row">
+                        {
+                            products.slice(2,5).map(({ id, product }) => (
+                                <Product 
+                                    id={id}
+                                    title={product.name}
+                                    price={product.price}
+                                    rating={product.rating}
+                                    image={product.image} />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>

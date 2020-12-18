@@ -7,6 +7,12 @@
     height: 60px;
 }
 
+.Header a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+
 .Header-logo img {
     width: 100px;
     margin-left: 11px;
