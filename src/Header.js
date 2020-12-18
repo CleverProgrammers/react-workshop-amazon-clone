@@ -4,7 +4,16 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
-function Header() {
+function Header({ cartItems }) {
+
+    const getCount = () => {
+        let count = 0;
+        cartItems.forEach((item) => {
+            count += item.product.quantity;
+        })
+        return count;
+    }
+
     return (
         <div className="Header">
             <div className="Header-logo">
@@ -39,7 +48,7 @@ function Header() {
 
                 <div className="Header-optionCart">
                     <ShoppingBasketIcon />
-                    <span className="Header-cartCount">12</span>
+                    <span className="Header-cartCount">{getCount()}</span>
                 </div>
             </div>
         </div>

@@ -7,7 +7,6 @@ function Home() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        
         db.collection('products').onSnapshot(snapshot => {
           // every time a new post is added fire this code off
           setProducts(snapshot.docs.map(doc => ({
@@ -20,7 +19,7 @@ function Home() {
     return (
         <div className="Home">
             <div className="Home-container">
-                <div className="Home-banner" style={{backgroundImage: "url(" + process.env.PUBLIC_URL + "/banner.jpg" + ")"}}>
+                <div className="Home-banner" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/banner.jpg)`}}>
                 </div>
                 <div className="Home-content">
                     <div className="Home-row">
@@ -35,10 +34,7 @@ function Home() {
                             ))
                         }
                     </div>
-                    
-
                 </div>
-
             </div>
         </div>
     )
