@@ -1,0 +1,21 @@
+.Product {
+    background-color: white;
+    max-height: 400px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.Product img {
+    object-fit: contain;
+    max-height: 200px;
+    min-width: 100px;
+}
+
+.Product-rating {
+    display: flex;
+}
