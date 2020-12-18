@@ -4,8 +4,6 @@ import './CartTotal.css'
 
 function CartTotal({ items }) {
 
-    console.log(items)
-
     const getTotalPrice = () => {
         let total = 0;
         items.forEach((item) => {

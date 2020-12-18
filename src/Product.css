@@ -26,8 +26,7 @@
     background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
     cursor: pointer;
     border-radius: 2px;
-    border-color: #a88734 #9c7e31 #846a29;
-    border: 1px solid;
+    border: 2px solid #a88734;
     width: 100px;
     height: 29px;
 }

@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 
 function Header({ cartItems }) {
 
+    console.log(cartItems)
+
     const getCount = () => {
         let count = 0;
         cartItems.forEach((item) => {

@@ -10,13 +10,6 @@ function CartItems(props) {
         // props.setCartItems(newItems);
     }
 
-    const deleteItem = (indexToDelete) => {
-        // const newItems = props.items.filter((value, index)=>{
-        //     return index !== indexToDelete;
-        // })
-        // props.setCartItems(newItems);
-    }
-
     return (
         <div className="CartItems">
             <h1>Shopping Cart</h1>
@@ -25,10 +18,9 @@ function CartItems(props) {
                 { props.items.map((item, index) => {
                     return <CartItem 
                         key={index} 
-                        id={index}
+                        id={item.id}
                         item={item.product}
                         changeItemQuantity={changeItemQuantity}
-                        deleteItem={deleteItem}
                     />
                 }) }
             </div>
